@@ -1,0 +1,7 @@
+trigger: none
+
+jobs:
+- template: image-generation.yml
+  parameters:
+    image_type: Windows2019-Azure
+    image_readme_name: Windows2019-Readme.md
