@@ -77,6 +77,7 @@ $markdown += New-MDList -Style Unordered -Lines @(
     (Get-BazelVersion),
     (Get-BazeliskVersion),
     (Get-CMakeVersion),
+    (Get-CodeQLBundleVersion),
     (Get-RVersion),
     (Get-DockerVersion),
     (Get-DockerComposeVersion),
@@ -112,6 +113,7 @@ $markdown += New-MDHeader "CLI Tools" -Level 3
 $markdown += New-MDList -Style Unordered -Lines @(
     (Get-AzureCLIVersion),
     (Get-AzureDevopsExtVersion),
+    (Get-AZDSVersion),
     (Get-AWSCLIVersion),
     (Get-AWSSAMVersion),
     (Get-AWSSessionManagerVersion),
