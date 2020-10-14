@@ -1,5 +1,3 @@
-$ErrorActionPreference = "Stop"
-
 Import-Module MarkdownPS
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Android.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Browsers.psm1") -DisableNameChecking
@@ -167,6 +165,7 @@ $markdown += New-MDNewLine
 $markdown += New-MDHeader "Database tools" -Level 3
 $markdown += New-MDList -Style Unordered -Lines @(
     (Get-AzCosmosDBEmulatorVersion),
+    (Get-DacFxVersion),
     (Get-SQLPSVersion),
     (Get-MySQLVersion)
 )
