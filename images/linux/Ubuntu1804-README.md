@@ -1,10 +1,13 @@
 | Announcements |
 |-|
+| [Default Node.JS will be switched to 14.x on all platforms ](https://github.com/actions/virtual-environments/issues/1953) |
+| [[macOS] Default Python will be upgraded to 3.9](https://github.com/actions/virtual-environments/issues/1929) |
+| [.NET 5.0 will become a default .NET version on November, 10](https://github.com/actions/virtual-environments/issues/1891) |
+| [[Ubuntu] [Windows] Boost 1.69.0 will be deprecated on November, 10](https://github.com/actions/virtual-environments/issues/1847) |
 | [Ubuntu-latest workflows will use Ubuntu-20.04](https://github.com/actions/virtual-environments/issues/1816) |
-| [Obsolete Android build-tools packages will be removed from Ubuntu images on October, 20](https://github.com/actions/virtual-environments/issues/1743) |
 ***
 # Ubuntu 18.04.5 LTS
-- Image Version: 20201015.1
+- Image Version: 20201102.0
 
 ## Installed Software
 ### Language and Runtime
@@ -13,7 +16,7 @@
 - Clang 6.0.0, 8.0.0, 9.0.0
 - Erlang 11.1
 - Mono 6.12.0.90
-- Node 12.19.0
+- Node 14.15.0
 - Python 2.7.17
 - Python3 3.6.9
 - PowerShell 7.0.3
@@ -23,13 +26,13 @@
 
 ### Package Management
 - Gem 3.1.4
-- Helm 3.3.4
-- Homebrew 2.5.6
+- Helm 3.4.0
+- Homebrew 2.5.8
 - Miniconda 4.8.3
 - Npm 6.14.8
 - Pip 9.0.1
 - Pip3 9.0.1
-- Pipx 0.15.5.1
+- Pipx 0.15.6.0
 - Vcpkg 2020.06.15
 - Yarn 1.22.5
 
@@ -37,49 +40,50 @@
 - Ant 1.10.5
 - Gradle 6.7
 - Maven 3.6.3
-- Sbt 1.4.0
+- Sbt 1.4.1
 
 ### Tools
 - 7-Zip 16.02
 - Ansible 2.9.14
-- AzCopy10 10.6.0 (available by `azcopy10` alias)
+- apt-fast 1.9.10
+- AzCopy10 10.6.1 (available by `azcopy10` alias)
 - AzCopy7 7.3.0 (available by `azcopy` alias)
-- Bazel 3.6.0
-- Bazelisk 1.7.2
+- Bazel 3.7.0
+- Bazelisk 1.7.3
 - Buildah 1.16.4
 - CMake 3.17.0
-- CodeQL Action Bundle 2.3.0
+- CodeQL Action Bundle 2.3.1+202010222007
 - curl 7.58.0
 - Docker Compose 1.27.4
 - Docker-Buildx 0.4.2
 - Docker-Moby 19.03.13
-- Git 2.28.0
+- Git 2.29.2
 - Git LFS 2.12.0
 - Git-ftp 1.3.1
-- Google Cloud SDK 314.0.0
+- Google Cloud SDK 316.0.0
 - Haveged 1.9.1
-- Heroku 7.46.0
-- HHVM (HipHop VM) 4.79.0
+- Heroku 7.47.0
+- HHVM (HipHop VM) 4.81.0
 - jq 1.5
 - Kind 0.9.0
 - Kubectl 1.19.3
-- Kustomize 3.8.5
+- Kustomize 3.8.6
 - Leiningen 2.9.4
 - m4 1.4.18
 - Mercurial 4.5.3
-- Minikube 1.14.0
-- Newman 5.2.0
+- Minikube 1.14.2
+- Newman 5.2.1
 - nvm 0.36.0
-- Packer 1.6.4
+- Packer 1.6.5
 - PhantomJS 2.1.1
 - Podman 2.1.1
-- Pulumi 2.12.0
+- Pulumi 2.12.1
 - R 4.0.3
 - Skopeo 1.2.0
 - Sphinx Open Source Search Server 2.2.11
 - SVN 1.9.7
 - Swig 3.0.12
-- Terraform 0.13.4
+- Terraform 0.13.5
 - unzip 6.00
 - wget 1.19.4
 - yamllint 1.25.0
@@ -88,14 +92,14 @@
 
 ### CLI Tools
 - Alibaba Cloud CLI 3.0.60
-- AWS CLI 1.18.157
-- AWS CLI Session manager plugin 1.1.61.0
-- AWS SAM CLI 1.6.2
-- Azure CLI (azure-cli) 2.13.0
+- AWS CLI 1.18.169
+- AWS CLI Session manager plugin 1.2.7.0
+- AWS SAM CLI 1.7.0
+- Azure CLI (azure-cli) 2.14.0
 - Azure CLI (azure-devops) 0.18.0
-- GitHub CLI 1.1.0
+- GitHub CLI 1.2.0
 - Hub CLI 2.14.2
-- Netlify CLI 2.65.5
+- Netlify CLI 2.67.2
 - oc CLI 4.5.0
 - ORAS CLI 0.8.1
 - Vercel CLI 20.1.2
@@ -103,22 +107,22 @@
 ### Java
 | Version             | Vendor       | Environment Variable |
 | ------------------- | ------------ | -------------------- |
-| 1.7.0_272           | Zulu         | JAVA_HOME_7_X64      |
-| 1.8.0_265 (default) | AdoptOpenJDK | JAVA_HOME_8_X64      |
-| 11.0.8              | AdoptOpenJDK | JAVA_HOME_11_X64     |
+| 1.7.0_282           | Zulu         | JAVA_HOME_7_X64      |
+| 1.8.0_272 (default) | AdoptOpenJDK | JAVA_HOME_8_X64      |
+| 11.0.9              | AdoptOpenJDK | JAVA_HOME_11_X64     |
 | 12.0.2              | AdoptOpenJDK | JAVA_HOME_12_X64     |
 
 ### PHP
 | Tool     | Version                     |
 | -------- | --------------------------- |
-| PHP      | 7.1.33 7.2.34 7.3.23 7.4.11 |
-| Composer | 1.10.15                     |
+| PHP      | 7.1.33 7.2.34 7.3.24 7.4.12 |
+| Composer | 2.0.4                       |
 | PHPUnit  | 7.5.20                      |
 
 ### Haskell
 - GHC 8.10.2
 - Cabal 3.4.0.0
-- Stack 2.3.3
+- Stack 2.5.1
 
 ### Rust Tools
 - Rust 1.47.0
@@ -128,16 +132,16 @@
 
 #### Packages
 - Bindgen 0.55.1
-- Cargo audit 0.12.1
-- Cargo outdated 0.9.11
+- Cargo audit 0.13.1
+- Cargo outdated 0.9.13
 - Cargo clippy 0.0.212
 - Cbindgen 0.15.0
 - Rustfmt 1.4.20
 
 ### Browsers and Drivers
-- Google Chrome 86.0.4240.75
+- Google Chrome 86.0.4240.183
 - ChromeDriver 86.0.4240.22
-- Mozilla Firefox 81.0
+- Mozilla Firefox 82.0
 - Geckodriver 0.27.0
 
 ### .NET Core SDK
@@ -152,7 +156,7 @@
 - sqlite3 3.22.0
 
 #### MySQL
-- MySQL 5.7.31
+- MySQL 5.7.32
 - MySQL Server (user:root password:root)
 - MS SQL Server Client Tools
 
@@ -164,7 +168,7 @@
 - 2.4.10
 - 2.5.8
 - 2.6.6
-- 2.7.1
+- 2.7.2
 
 #### Python
 - 2.7.18
@@ -180,9 +184,9 @@
 
 #### Node.js
 - 8.17.0
-- 10.22.1
+- 10.23.0
 - 12.19.0
-- 14.13.1
+- 14.15.0
 
 #### Go
 - 1.11.13
