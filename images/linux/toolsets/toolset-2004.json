@@ -54,10 +54,25 @@
             "versions": [
                 "2.5.*",
                 "2.6.*",
-                "2.7.*"
+                "2.7.*",
+                "3.0.*"
+            ]
+        },
+        {
+            "name": "CodeQL",
+            "platform" : "linux",
+            "arch": "x64",
+            "versions": [
+                "*"
             ]
         }
     ],
+    "java": {
+        "default": "11",
+        "versions": [
+            "8", "11"
+        ]
+    },
     "android": {
         "platform_min_version": "27",
         "build_tools_min_version": "27.0.0",
@@ -72,7 +87,8 @@
             "cmake;3.10.2.4988404",
             "patcher;v4",
             "ndk-bundle",
-            "platform-tools"
+            "platform-tools",
+            "cmdline-tools;latest"
         ]
     },
     "powershellModules": [
@@ -90,11 +106,13 @@
     ],
     "apt": {
         "common_packages": [
+            "build-essential",
             "dbus",
             "dnsutils",
             "dpkg",
             "fakeroot",
             "gnupg2",
+            "imagemagick",
             "iproute2",
             "iputils-ping",
             "lib32z1",
@@ -103,7 +121,11 @@
             "libcurl4",
             "libgbm-dev",
             "libgconf-2-4",
+            "libgsl-dev",
             "libgtk-3-0",
+            "libmagic-dev",
+            "libmagickcore-dev",
+            "libmagickwand-dev",
             "libsecret-1-dev",
             "libsqlite3-dev",
             "libunwind8",
@@ -111,6 +133,7 @@
             "libxss1",
             "locales",
             "openssh-client",
+            "p7zip-rar",
             "pkg-config",
             "python-is-python3",
             "rpm",
@@ -132,18 +155,24 @@
             "file",
             "flex",
             "ftp",
+            "haveged",
             "jq",
             "m4",
             "mediainfo",
             "netcat",
+            "p7zip-full",
             "parallel",
             "pass",
             "patchelf",
+            "pollinate",
             "rsync",
             "shellcheck",
+            "sphinxsearch",
             "sqlite3",
             "ssh",
+            "subversion",
             "sudo",
+            "swig",
             "telnet",
             "time",
             "unzip",
