@@ -30,7 +30,6 @@
             "platform" : "linux",
             "arch": "x64",
             "versions": [
-                "8.*",
                 "10.*",
                 "12.*",
                 "14.*"
@@ -86,7 +85,7 @@
         "additional_tools": [
             "cmake;3.10.2.4988404",
             "patcher;v4",
-            "ndk-bundle",
+            "ndk;21.3.6528147",
             "platform-tools",
             "cmdline-tools;latest"
         ]
@@ -107,6 +106,7 @@
     "apt": {
         "common_packages": [
             "build-essential",
+            "chromium-browser",
             "dbus",
             "dnsutils",
             "dpkg",

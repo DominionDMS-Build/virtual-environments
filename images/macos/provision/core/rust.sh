@@ -16,3 +16,5 @@ cargo install bindgen cbindgen cargo-audit cargo-outdated
 
 echo Cleanup Cargo registry cached data...
 rm -rf $CARGO_HOME/registry/*
+
+invoke_tests "Rust"
