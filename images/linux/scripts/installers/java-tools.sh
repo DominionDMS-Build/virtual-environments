@@ -22,13 +22,8 @@ fi
 apt-get update
 
 for JAVA_VERSION in ${JAVA_VERSIONS_LIST[@]}; do
-    if [[ $JAVA_VERSION == "7" ]]; then
-        apt-get -y install zulu-7-azure-jdk=\*
-        echo "JAVA_HOME_7_X64=/usr/lib/jvm/zulu-7-azure-amd64" | tee -a /etc/environment
-    else
-        apt-get -y install adoptopenjdk-$JAVA_VERSION-hotspot=\*
-        echo "JAVA_HOME_${JAVA_VERSION}_X64=/usr/lib/jvm/adoptopenjdk-${JAVA_VERSION}-hotspot-amd64" | tee -a /etc/environment
-    fi
+    apt-get -y install adoptopenjdk-$JAVA_VERSION-hotspot=\*
+    echo "JAVA_HOME_${JAVA_VERSION}_X64=/usr/lib/jvm/adoptopenjdk-${JAVA_VERSION}-hotspot-amd64" | tee -a /etc/environment
 done
 
 # Set Default Java version.
@@ -50,7 +45,6 @@ curl -sL https://www-eu.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-mave
 unzip -d /usr/share maven.zip
 rm maven.zip
 ln -s /usr/share/apache-maven-3.6.3/bin/mvn /usr/bin/mvn
-echo "M2_HOME=/usr/share/apache-maven-3.6.3" | tee -a /etc/environment
 
 # Install Gradle
 # This script downloads the latest HTML list of releases at https://gradle.org/releases/.
