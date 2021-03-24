@@ -123,7 +123,9 @@
             "iputils-ping",
             "lib32z1",
             "libc++abi-dev",
+            "libc++abi-11-dev",
             "libc++-dev",
+            "libc++-11-dev",
             "libcurl4",
             "libgbm-dev",
             "libgconf-2-4",
@@ -154,6 +156,7 @@
             "zsync"
         ],
         "cmd_packages": [
+            "acl",
             "binutils",
             "bison",
             "brotli",
@@ -168,6 +171,7 @@
             "m4",
             "mediainfo",
             "netcat",
+            "net-tools",
             "p7zip-full",
             "parallel",
             "pass",
@@ -198,8 +202,6 @@
             "buildpack-deps:buster",
             "debian:8",
             "debian:9",
-            "jekyll/builder",
-            "mcr.microsoft.com/azure-pipelines/node8-typescript",
             "node:10",
             "node:12",
             "node:10-alpine",
@@ -232,7 +234,8 @@
         "versions": [
             "8",
             "9",
-            "10"
+            "10",
+            "11"
         ],
         "default_version": "10"
     },
@@ -259,5 +262,51 @@
     },
     "rubygems": [
         {"name": "fastlane"}
+    ],
+    "node_modules": [
+        {
+            "name": "grunt",
+            "command": "grunt"
+        },
+        {
+            "name": "gulp",
+            "command": "gulp"
+        },
+        {
+            "name": "n",
+            "command": "n"
+        },
+        {
+            "name": "parcel-bundler",
+            "command": "parcel"
+        },
+        {
+            "name": "typescript",
+            "command": "tsc"
+        },
+        {
+            "name": "newman",
+            "command": "newman"
+        },
+        {
+            "name": "vercel",
+            "command": "vercel"
+        },
+        {
+            "name": "webpack",
+            "command": "webpack"
+        },
+        {
+            "name": "webpack-cli",
+            "command": "webpack-cli"
+        },
+        {
+            "name": "netlify-cli",
+            "command": "netlify"
+        },
+        {
+            "name": "lerna",
+            "command": "lerna"
+        }
     ]
 }

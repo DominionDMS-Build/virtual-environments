@@ -1,8 +1,11 @@
 #!/bin/bash -e
 
-#Set ImageVersion and ImageOS env variables
+# Set ImageVersion and ImageOS env variables
 echo ImageVersion=$IMAGE_VERSION | tee -a /etc/environment
 echo ImageOS=$IMAGE_OS | tee -a /etc/environment
+
+# Set the ACCEPT_EULA variable to Y value to confirm your acceptance of the End-User Licensing Agreement
+echo ACCEPT_EULA=Y | tee -a /etc/environment
 
 # This directory is supposed to be created in $HOME and owned by user(https://github.com/actions/virtual-environments/issues/491)
 mkdir -p /etc/skel/.config/configstore
