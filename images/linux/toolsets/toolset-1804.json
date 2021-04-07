@@ -146,6 +146,7 @@
             "openssh-client",
             "p7zip-rar",
             "pkg-config",
+            "python-setuptools",
             "rpm",
             "texinfo",
             "tk",
@@ -183,6 +184,7 @@
             "sqlite3",
             "sphinxsearch",
             "ssh",
+            "sshpass",
             "subversion",
             "sudo",
             "swig",
@@ -303,6 +305,10 @@
         {
             "name": "netlify-cli",
             "command": "netlify"
+        },
+        {
+            "name": "yarn",
+            "command": "yarn"
         }
     ]
 }
