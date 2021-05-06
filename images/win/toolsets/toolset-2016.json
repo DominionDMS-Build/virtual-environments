@@ -45,7 +45,7 @@
         {
             "name": "PyPy",
             "arch": "x86",
-            "platform" : "win32",
+            "platform" : "win64",
             "versions": [
                 "2.7",
                 "3.6",
@@ -164,6 +164,7 @@
         ],
         "additional_tools": [
             "cmake;3.10.2.4988404",
+            "cmake;3.18.1",
             "patcher;v4",
             "cmdline-tools;latest"
         ],

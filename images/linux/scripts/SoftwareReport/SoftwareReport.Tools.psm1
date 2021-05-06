@@ -95,7 +95,8 @@ function Get-GitFTPVersion {
 }
 
 function Get-GoogleCloudSDKVersion {
-    return "$(gcloud --version | Select-Object -First 1)"
+    $aptSourceRepo = Get-AptSourceRepository -PackageName "google-cloud-sdk"
+    return "$(gcloud --version | Select-Object -First 1) (apt source repository: $aptSourceRepo)"
 }
 
 function Get-HavegedVersion {
@@ -183,7 +184,8 @@ function Get-JqVersion {
 
 function Get-AzureCliVersion {
     $azcliVersion = az -v | Select-String "azure-cli" | Take-OutputPart -Part -1
-    return "Azure CLI (azure-cli) $azcliVersion"
+    $aptSourceRepo = Get-AptSourceRepository -PackageName "azure-cli"
+    return "Azure CLI (azure-cli) $azcliVersion (installation method: $aptSourceRepo)"
 }
 
 function Get-AzureDevopsVersion {
@@ -262,4 +264,9 @@ function Get-SphinxVersion {
 
 function Get-YamllintVersion {
     return "$(yamllint --version)"
+}
+
+function Get-ZstdVersion {
+    $zstdVersion = zstd --version | Take-OutputPart -Part 1 -Delimiter "v" | Take-OutputPart -Part 0 -Delimiter ","
+    return "zstd $zstdVersion (homebrew)"
 }

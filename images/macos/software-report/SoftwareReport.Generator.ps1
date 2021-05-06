@@ -32,6 +32,7 @@ $markdown += New-MDHeader "Installed Software" -Level 2
 $markdown += New-MDHeader "Language and Runtime" -Level 3
 $languageAndRuntimeList = @(
     (Get-BashVersion),
+    (Get-MSBuildVersion),
     (Get-NodeVersion),
     (Get-NVMVersion),
     (Get-NVMNodeVersionList),
@@ -164,7 +165,8 @@ if( -not $os.IsHighSierra) {
         (Get-GHCupVersion),
         (Get-GHCVersion),
         (Get-CabalVersion),
-        (Get-StackVersion)
+        (Get-StackVersion),
+        (Get-SwiftFormatVersion)
     )
 }
 

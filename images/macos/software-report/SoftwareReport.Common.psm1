@@ -156,6 +156,14 @@ function Get-PHPVersion {
     return $PHPVersion
 }
 
+function Get-MSBuildVersion {
+    $msbuildVersion = msbuild -version | Select-Object -Last 1
+    $result = Select-String -Path (Get-Command msbuild).Source -Pattern "msbuild"
+    $result -match "(?<path>\/\S*\.dll)" | Out-Null
+    $msbuildPath = $Matches.path
+    return "MSBuild $msbuildVersion (from $msbuildPath)"
+}
+
 function Get-NodeVersion {
     $nodeVersion = Run-Command "node --version"
     return "Node.js $nodeVersion"
@@ -457,6 +465,11 @@ function Get-CabalVersion {
 function Get-StackVersion {
     $stackVersion = Run-Command "stack --version" | Take-Part -Part 1 | ForEach-Object {$_.replace(",","")}
     return "Stack $stackVersion"
+}
+
+function Get-SwiftFormatVersion {
+    $swiftFormatVersion = Run-Command "swiftformat --version"
+    return "SwiftFormat $swiftFormatVersion"
 }
 
 function Get-YamllintVersion {
