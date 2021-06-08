@@ -253,6 +253,7 @@
             "perl",
             "subversion",
             "swiftformat",
+            "swig",
             "xctool",
             "zstd"
         ],
@@ -261,6 +262,13 @@
             "r",
             "vagrant",
             "virtualbox"
+        ]
+    },
+    "gcc": {
+        "versions": [
+            "9",
+            "10",
+            "11"
         ]
     },
     "toolcache": [
@@ -332,5 +340,13 @@
         "versions": [
             "2.1"
         ]
-    }
+    },
+    "rubygems": [
+        "xcode-install",
+        "cocoapods",
+        "nomad-cli",
+        "xcpretty",
+        "bundler",
+        "fastlane"
+    ]
 }
