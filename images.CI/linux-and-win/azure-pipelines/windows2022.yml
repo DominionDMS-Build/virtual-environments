@@ -3,7 +3,7 @@ pr:
   autoCancel: true
   branches:
     include:
-    - main
+    - segunss-patch-2
 
 jobs:
 - template: image-generation.yml
