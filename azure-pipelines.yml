@@ -1,0 +1,34 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+variables:
+  TemplatePath: $( Pipeline.Workspace)/images/windows/templates/windows-2022.pkr.hcl
+  vm_size: Stanard_Bms
+  InstallPassword: super
+
+
+  
+
+pool:
+ name: ci-agent-pool
+ vmImage: Ent-Packer
+
+steps:
+- script: |
+      packer build -var "subscription_id=$SubscriptionId" `
+             -var "client_id=$ClientId" `
+             -var "client_secret=$ClientSecret" `
+             -var "install_password=super" `
+             -var "location=eastus" `
+             -var "managed_image_name=$(Build.BuildId)-agent" `
+             -var "managed_image_resource_group_name=EntAgentsEast" `
+             -var "tenant_id=$TenantId" `
+             -var "vm_size=$vm_size"
+             $TemplatePath
+  displayName: 'Build Packer Image'
+
+
