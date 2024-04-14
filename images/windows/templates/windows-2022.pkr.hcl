@@ -8,7 +8,7 @@ packer {
 }
 
 locals {
-  managed_image_name = var.managed_image_name != "" ? var.managed_image_name : "packer-${var.image_os}-${var.image_version}"
+  managed_image_name = var.managed_image_name != "" ? var.managed_image_name : ""
 }
 
 variable "agent_tools_directory" {
@@ -163,7 +163,7 @@ source "azure-arm" "image" {
   managed_image_resource_group_name      = "${var.managed_image_resource_group_name}"
   managed_image_storage_account_type     = "${var.managed_image_storage_account_type}"
   object_id                              = "${var.object_id}"
-  os_disk_size_gb                        = "256"
+  os_disk_size_gb                        = "512"
   os_type                                = "Windows"
   private_virtual_network_with_public_ip = "${var.private_virtual_network_with_public_ip}"
   subscription_id                        = "${var.subscription_id}"
