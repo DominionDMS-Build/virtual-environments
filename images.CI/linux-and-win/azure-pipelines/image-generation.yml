@@ -154,7 +154,7 @@ jobs:
       displayName: 'Create release for VM deployment'
       inputs:
         targetType: filePath
-        filePath: ./images.CI/linux-and-win/create-release.ps1
+        filePath: ./images.CI/linux-and-win/create-agent.ps1
 
 
   - task: PowerShell@2
